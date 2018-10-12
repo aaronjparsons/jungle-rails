@@ -22,23 +22,46 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
-          <dt>Reviews</dt>
-          <% @product.reviews.each do |review| %>
-            <dd>Name: <%= review.user.name %></dd>
-            <dd>Rating: <%= review.rating %></dd>
-            <dd><%= review.description %></dd>
-          <% end %>
         </dl>
       </div>
     </div>
 
-    <%= form_for [@product, @review] do |f| %>
-      <%= f.label :rating %>
-      <%= f.select :rating, [1, 2, 3, 4, 5]%>
-      <%= f.label :description %>
-      <%= f.text_field :description %>
-      <%= f.submit 'Submit Review', class: 'btn btn-primary' %>
-    <% end %>
+    <div class="row">
+      <div class="col-sm-4">
+        <% if current_user %>
+          <h3> Leave a Review!</h3>
+          <%= form_for [@product, @review] do |f| %>
+            <div class="form-group">
+              <%= f.label :rating %>
+              <%= f.select :rating, [1, 2, 3, 4, 5], class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= f.label :description %>
+              <%= f.text_field :description, class: 'form-control' %>
+            </div>
+            <%= f.submit 'Submit Review', class: 'btn btn-primary' %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="col-sm-8">
+        <dl class="dl-horizontal">
+          <dd><h3>Reviews</h3></dd>
+          <% @product.reviews.reverse_each do |review| %>
+            <dt>Name:</dt>
+            <dd><%= review.user.name %></dd>
+            <dt>Date:</dt>
+            <dd><%= review.created_at.strftime('%F') %></dd>
+            <dt>Rating:</dt>
+            <dd><%= review.rating %>/5</dd>
+            <dt>Comments:</dt>
+            <dd><%= review.description %></dd>
+            <% if review.user === current_user %>
+              <dd><%= button_to "Delete", [@product, review], method: :delete %></dd>
+            <% end %>
+          <% end %>
+        </dl>
+      </div>
+    </div>
 
   </article>
 
