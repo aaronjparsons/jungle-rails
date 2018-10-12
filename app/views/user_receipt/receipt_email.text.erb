@@ -1,6 +1,12 @@
-Welcome to example.com
+Thanks for shopping with Jungle!
+
+Order <%= @order.id %> has been confirmed, we are packing it up for you right now!
 ===============================================
  
-You have successfully signed up to example.com,
- 
-Thanks for joining and have a great day!
+Items Purchased:
+<% @line_items.each do |item| %>
+  <p>* <%= item.product.name %> x<%= item.quantity %></p>
+<% end %>
+
+Order Total:
+$<%= @order.total_cents / 100.0 %>
