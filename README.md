@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. Simulates a real world situation of inheriting an existing code base in a language/framework that you are not comfortable with.
+A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. Simulates a real world situation of inheriting an existing code base in a language/framework that you are not comfortable/familiar with.
 
 ## Screenshots
 ![App Screenshot 1](https://github.com/aaronjparsons/jungle-rails/blob/master/docs/ss1.png)
