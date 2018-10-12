@@ -29,7 +29,7 @@
             <%= form_for [@product, @review] do |f| %>
               <div class="form-group">
                 <dt><%= f.label :rating %></dt>
-                <dd><%= f.select :rating, [1, 2, 3, 4, 5], class: 'form-control' %></dd>
+                <dd><%= f.select :rating, [1, 2, 3, 4, 5], class: 'form-control' %> / 5</dd>
               </div>
               <div class="form-group">
                 <dt><%= f.label :description %></dt>
