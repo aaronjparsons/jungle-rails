@@ -1,7 +1,20 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. Simulates a real world situation of inheriting an existing code base in a language/framework that you are not comfortable with.
 
+## Screenshots
+![App Screenshot 1](https://github.com/aaronjparsons/jungle-rails/blob/master/docs/ss1.png)
+![App Screenshot 1](https://github.com/aaronjparsons/jungle-rails/blob/master/docs/ss2.png)
+
+## Contributions to Project
+* Feature - Product Sold Out Badge
+* Feature - Admin Category Routes & Creation
+* Feature - User Registration & Login
+* Feature - Order Details Upon Checkout
+* Feature - Receipts Delivered via Email
+* Feature - Admin Authentication
+* Bug Fix - Checking out With Empty Cart
+* Feature - Product Ratings & Reviews
 
 ## Setup
 
