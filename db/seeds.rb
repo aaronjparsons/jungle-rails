@@ -132,6 +132,26 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## USERS
+
+puts "Re-creating Users ..."
+
+User.destroy_all
+
+User.create!({
+  name: 'Bob Vance',
+  email: 'bob.vance@refrigeration.com',
+  password: 'phyllis',
+  password_confirmation: 'phyllis',
+})
+
+User.create!({
+  name: 'Raymond Holt',
+  email: 'ray.holt@nypd.com',
+  password: 'JakeIsTheBest',
+  password_confirmation: 'JakeIsTheBest',
+})
+
 ## REVIEWS
 
 puts "Re-creating Reviews ..."
@@ -147,7 +167,7 @@ Review.create!({
 
 Review.create!({
   product_id: 2,
-  user_id: 1,
+  user_id: 2,
   description: "This product is hella lame!",
   rating: 1,
 })
@@ -157,6 +177,20 @@ Review.create!({
   user_id: 1,
   description: "This product is okey doke",
   rating: 3,
+})
+
+Review.create!({
+  product_id: 12,
+  user_id: 2,
+  description: "Coolest thing ever! I even bought 2 of them!",
+  rating: 5,
+})
+
+Review.create!({
+  product_id: 15,
+  user_id: 1,
+  description: "Pretty decent, no complaints to be had here",
+  rating: 4,
 })
 
 
