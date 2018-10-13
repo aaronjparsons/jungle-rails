@@ -7,14 +7,28 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 ![App Screenshot 1](https://github.com/aaronjparsons/jungle-rails/blob/master/docs/ss2.png)
 
 ## Contributions to Project
-* Feature - Product Sold Out Badge
-* Feature - Admin Category Routes & Creation
-* Feature - User Registration & Login
-* Feature - Order Details Upon Checkout
-* Feature - Receipts Delivered via Email
-* Feature - Admin Authentication
-* Bug Fix - Checking out With Empty Cart
-* Feature - Product Ratings & Reviews
+* #### Feature - Product Sold Out
+  * Sold out badge on product panel
+  * Disabled add to cart button if sold out
+* #### Feature - Admin Category Routes & Creation
+  * Added ability for admin to create new categories
+  * Added list of currently existing categories
+* #### Feature - User Authentication
+  * Added user table to database
+  * Implemented user registration & login 
+* #### Feature - Order Details Upon Checkout
+  * After successful order, user is now shown a page displaying detailed order info
+* #### Feature - Receipts Delivered via Email
+  * User receives an email receipt after successful order
+* #### Feature - Admin Authentication
+  * Implemented admin authentication to be able to access admin area
+* #### Bug Fix - Checking out With Empty Cart
+  * User now no longer sees the checkout button when cart is empty
+  * Instead a message is shown telling them that their cart is currently empty
+* #### Feature - Product Ratings & Reviews
+  * Added product reviews on product pages
+  * Users are able to add reviews when they are logged in
+  * Users are able to delete their own reviews
 
 ## Setup
 
