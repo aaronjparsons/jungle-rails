@@ -4,7 +4,8 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Screenshots
 ![App Screenshot 1](https://github.com/aaronjparsons/jungle-rails/blob/master/docs/ss1.png)
-![App Screenshot 1](https://github.com/aaronjparsons/jungle-rails/blob/master/docs/ss2.png)
+![App Screenshot 2](https://github.com/aaronjparsons/jungle-rails/blob/master/docs/ss2.png)
+![App Screenshot 3](https://github.com/aaronjparsons/jungle-rails/blob/master/docs/gif1.gif)
 
 ## Contributions to Project
 * #### Feature - Product Sold Out
