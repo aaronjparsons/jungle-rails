@@ -48,7 +48,7 @@ RSpec.describe User, type: :model do
   describe '.authenticate_with_credentials' do
     it "is valid with valid attributes" do
       @user = User.create(name: "Test", email: "test@test.com", password: "teSteR", password_confirmation: "teSteR")
-      expect(User.authenticate_with_credentials("test@test.com", "teSteR")).to_not be nil
+      expect(User.authenticate_with_credentials("test@test.com", "teSteR")).to eq(@user)
     end
 
     it "is not valid without a valid email" do
@@ -63,12 +63,12 @@ RSpec.describe User, type: :model do
 
     it "is valid with extra spaces before and/or after their email" do
       @user = User.create(name: "Test", email: "test@test.com", password: "teSteR", password_confirmation: "teSteR")
-      expect(User.authenticate_with_credentials(" test@test.com ", "teSteR")).to_not be nil
+      expect(User.authenticate_with_credentials(" test@test.com ", "teSteR")).to eq(@user)
     end
 
     it "is valid with with case insensitive email" do
       @user = User.create(name: "Test", email: "test@test.com", password: "teSteR", password_confirmation: "teSteR")
-      expect(User.authenticate_with_credentials("tEst@teSt.com", "teSteR")).to_not be nil
+      expect(User.authenticate_with_credentials("tEst@teSt.com", "teSteR")).to eq(@user)
     end
   end
 end
