@@ -33,7 +33,8 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 * #### Bug Fix - Checking out With Empty Cart
   * User now no longer sees the checkout button when cart is empty
   * Instead a message is shown telling them that their cart is currently empty
-* #### Testing - Implemented Feature Tests with Capybara
+* #### Testing - Implemented Model Tests & Feature Tests
+  * Added model testing for users and products
   * Test that user sees products on the homepage
   * Test that a user can navigate to a product details page
   * Test that a user can add a product to their cart
