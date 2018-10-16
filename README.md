@@ -23,13 +23,22 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
   * User receives an email receipt after successful order
 * #### Feature - Admin Authentication
   * Implemented admin authentication to be able to access admin area
-* #### Bug Fix - Checking out With Empty Cart
-  * User now no longer sees the checkout button when cart is empty
-  * Instead a message is shown telling them that their cart is currently empty
 * #### Feature - Product Ratings & Reviews
   * Added product reviews on product pages
   * Users are able to add reviews when they are logged in
   * Users are able to delete their own reviews
+* #### Feature - Heroku deployment
+  * Deployed the web app onto Heroku
+  * https://radiant-lake-87083.herokuapp.com/
+* #### Bug Fix - Checking out With Empty Cart
+  * User now no longer sees the checkout button when cart is empty
+  * Instead a message is shown telling them that their cart is currently empty
+* #### Testing - Implemented Feature Tests with Capybara
+  * Test that user sees products on the homepage
+  * Test that a user can navigate to a product details page
+  * Test that a user can add a product to their cart
+  * Test that a user can succesfully login
+
 
 ## Setup
 
